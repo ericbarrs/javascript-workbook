@@ -43,7 +43,7 @@ function rockPaperScissors(hand1, hand2) {
   else{
     return "Invalid material try again using rock , paper , or scissors";
   }
-
+// 
 }
 
 function getPrompt() {
