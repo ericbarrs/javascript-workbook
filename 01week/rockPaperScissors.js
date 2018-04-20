@@ -6,11 +6,43 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-
+   // save
 
 function rockPaperScissors(hand1, hand2) {
-
   // Write code here
+
+  //evaluates rock losing to paper hand2 wins
+  if (hand1 === 'rock' && hand2 === 'paper'){
+    return "Hand2 Wins!!!";
+    }
+  //evaluates paper beating rock hand1 wins
+  else if(hand1 === 'paper' && hand2 === 'rock'){
+    return "Hand1 Wins!!!";
+  }
+    //evaluates rock beating scissors hand1 wins
+  else if(hand1 === 'rock' && hand2 === 'scissors'){
+    return "Hand1 Wins!!!";
+  }
+    //evaluates scissors losing to rock hand2 wins
+  else if(hand1 === 'scissors' && hand2 === 'rock'){
+    return "Hand2 Wins!!!";
+  }
+    //evaluates paper losing to scissors hand2 wins
+  else if(hand1 === 'paper' && hand2 === 'scissors'){
+    return "Hand2 Wins!!!";
+  }
+    //evaluates scissors beating paper hand1 wins
+  else if(hand1 === 'scissors' && hand2 === 'paper'){
+    return "Hand1 Wins!!!";
+  }
+    //evaluates a tie
+  else if(hand1 === hand2){
+    return "Its a Tie";
+  }
+  // evaluates entering a invalid object
+  else{
+    return "Invalid material try again using rock , paper , or scissors";
+  }
 
 }
 
