@@ -10,7 +10,8 @@ const rl = readline.createInterface({
 
 function rockPaperScissors(hand1, hand2) {
   // Write code here
-
+hand1 = hand1.toLowerCase();
+hand2 = hand2.toLowerCase();
   //evaluates rock losing to paper hand2 wins
   if (hand1 === 'rock' && hand2 === 'paper'){
     return "Hand2 Wins!!!";
@@ -43,7 +44,7 @@ function rockPaperScissors(hand1, hand2) {
   else{
     return "Invalid material try again using rock , paper , or scissors";
   }
-// 
+//
 }
 
 function getPrompt() {
