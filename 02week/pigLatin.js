@@ -8,11 +8,29 @@ const rl = readline.createInterface({
 });
 
 
-function pigLatin(word) {
+const pigLatin = (word) => {
+  // makes array that split the passed in word into an array
+  const wordArray = word.split("");
+  // make
+  const vowels = ['a','e','i','o','u'];
 
-  // Your code here
-
-}
+  if(vowels.includes(word[0])){
+    // adds way to the end of words that start with a vowel
+    return word += 'way';
+  }else{
+    //loop startes at the 0 in the array until it get to a vowel
+    for(let i = 0; i < word.length; i++){
+      if(!vowels.includes(word[i])) {
+        //pushes the last element to the end and shift removes the first item
+        wordArray.push(wordArray.shift());
+      }else{
+        // push "ay" to the end of the array
+        wordArray.push('ay');
+        return wordArray.join('');
+      }
+    }
+  }
+};
 
 
 function getPrompt() {
