@@ -31,9 +31,7 @@ function horizontalWin() {
       board[0][0] === playerTurn && board[1][1] === playerTurn && board[2][2] === playerTurn ||
       board[0][2] === playerTurn && board[1][1] === playerTurn && board[2][0] === playerTurn) {
         console.log(playerTurn + '\'s Win!!!');
-        // board.forEach(currentValue(element) {
-        //   console.log(element);
-        // })
+          reset();
 
       }else{
         if (playerTurn === 'X'? playerTurn = 'O' : playerTurn = 'X');
@@ -58,7 +56,14 @@ function horizontalWin() {
 //       console.log(playerTurn + '\'s Win!!!')
 //     }
 // }
-
+function reset(){
+  board = [
+    [' ', ' ', ' '],
+    [' ', ' ', ' '],
+    [' ', ' ', ' ']
+  ];
+  getPrompt();
+}
 function checkForWin() {
   // Your code here
   horizontalWin();
