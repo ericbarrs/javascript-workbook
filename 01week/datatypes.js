@@ -1,6 +1,6 @@
 'use strict'
-let num1 = 1;
-let num2 = 2;
+const num1 = 1;
+const num2 = 2;
 const string1 = '1';
 const dataType = 3;
 
