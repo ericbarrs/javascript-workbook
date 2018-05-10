@@ -62,7 +62,7 @@ function isLegal(startStack, endStack) {
 
 function checkForWin() {
   // Your code here
-  if (stacks.a.length === 4 || stacks.c.length === 4) {
+  if (stacks.b.length === 4 || stacks.c.length === 4) {
     console.log('!!!!!!   You Win  !!!!!!');
     rl.question("Would you like to reset?", (reset) => {
       resetGame(reset);
