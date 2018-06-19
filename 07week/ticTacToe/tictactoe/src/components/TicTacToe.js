@@ -10,11 +10,11 @@ state = {
   }
 
    handleClick(event){
-      Moves: this.state.Moves ++
       if ( this.state.board[event.target.dataset.cell] === ''){
          this.state.board[event.target.dataset.cell] = this.state.turn
          event.target.innerText = this.state.turn;
        }
+       this.setState({Moves: this.state.Moves += 1})
       this.win()
     }
 
@@ -61,7 +61,7 @@ state = {
 
 
   render() {
-    if(this.state.Win === false){
+    if(this.state.Win === false && this.state.Tie === false){
     return (
       <div className='board' onClick={(e)=>this.handleClick(e)} onChange={()=>this.win()}>
         <div className="row">
@@ -81,11 +81,17 @@ state = {
         </div>
       </div>
       );
-    }else{
+    }else if(this.state.Win === true){
       return (
         <div className='reset'>
         <h1>Player {this.state.turn} Wins!!!</h1>
         <button onClick={(e)=>this.restartButton(e)}>Restart</button>
+        </div>
+      )
+    }else if(this.state.Tie === true){
+      return (
+        <div className='reset'>
+        <h1>Its a Tie !!!</h1><button onClick={(e)=>this.restartButton(e)}>Restart</button>
         </div>
       )
     }
