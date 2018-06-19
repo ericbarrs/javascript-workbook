@@ -10,7 +10,12 @@ html{
 body{
   height:100%;
 }
-
+.board{
+  margin-top: 15%;
+}
+.reset{
+  margin-top: 15%;
+}
 div[data-cell] {
   width: 100px;
   height: 100px;
